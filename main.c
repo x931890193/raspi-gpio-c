@@ -11,6 +11,7 @@ int main(int argc, char*argv []) {
         return 1;
     }
     int Pin = atoi(argv[1]);
+    printf("Hello, raspi-gpio-c! use pin %d\n", Pin);
     SYSFS_GPIO_Export(Pin);
     SYSFS_GPIO_Direction(Pin, 1);
     SYSFS_GPIO_Write(Pin, 1);
